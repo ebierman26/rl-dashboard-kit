@@ -130,6 +130,7 @@
         <h3>Run the installer</h3>
         <p>Double-click <strong>RL-Dashboard-Setup.exe</strong> in your Downloads.</p>
         <div class="heads"><b>Blue "Windows protected your PC" box?</b> That's normal for small free programs that aren't paid-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</div>
+        <div class="heads"><b>Windows Security says it found a threat?</b> It's a false alarm (see <a href="#defender">below</a> for what to do).</div>
       </div></li>
       <li><div class="step">
         <h3>Click through three pages</h3>
@@ -187,6 +188,14 @@
     <dl>
       <div><dt>I already have an older version.</dt>
         <dd>Just run the installer. It finds your copy and updates it in the same folder, keeping your name, settings and match history.</dd></div>
+      <div id="defender"><dt>Windows Security flagged the installer (e.g. "Trojan:Win32/Wacatac").</dt>
+        <dd>That's a false alarm. Windows sometimes guesses that a new program from a small developer is a threat, especially an installer few people have downloaded yet. The file has been reported to Microsoft as safe. To install anyway:
+          <ol>
+            <li>Open <strong>Windows Security</strong> › <strong>Virus &amp; threat protection</strong> › <strong>Protection history</strong>.</li>
+            <li>Click the RL-Dashboard-Setup.exe entry, then <strong>Actions</strong> › <strong>Allow on device</strong> (or <strong>Restore</strong>).</li>
+            <li>Download it again if it was deleted, and run it.</li>
+          </ol>
+          Rather not? Download <a href="https://github.com/ebierman26/rl-dashboard-kit/releases/latest/download/RL-Dashboard-kit.zip">the zip version</a> instead: right-click it › <strong>Extract All</strong>, then double-click <strong>START HERE</strong>.</dd></div>
       <div><dt>Will Rocket League think it's cheating?</dt>
         <dd>No. It uses the game's official Stats API, which Psyonix provides for tools like this. It doesn't touch the game's files or memory, and the overlay is a separate window.</dd></div>
       <div><dt>The overlay won't let me click it.</dt>
