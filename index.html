@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Install RL Dashboard: live stats for every Rocket League match you play, an overlay and a stats dashboard. Free, for Windows.">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFXklEQVR42u2bS2yUZRiF2Xfair0y00IrvWCtDKX0fkEaApaZYRBoLTQVRURb0BExpK2CtyKxkg7REINcKtXIRcGFUTSh+VyAW2M00RjIrxsScWnjxsXx/SH2//t1JOebMk07dZJnec6850nadNFv3rz/P/wnv/m8P7/5k4gQFdQMI3r7tvP+uzu66Wx6fvNZKT5nCZglWLdultunND6v6eNwXtMZS8AsxbI3xDe+8aNhAUnCsNn4hhEZP4KkQjaR4z8YFpCk3FmCr/5k2Fd/CsnNydi/E3x1x9MFy1d3AsmNvfF4egwBxyIC5giRSQK8te9ZAuYI1sTxNUf9AuYYzl+M3up3It6adxEPj73wOUYu/ojRb38bp2/wG5S2HEO8ndOCbB4XsKD6SFSACVXrT8nYXzH2198xuXFzDLsOfAXT3mkk6gioGlICWFaETuDG72P/Od7Nrv2XYNI9jShHwIrDSgDL6FWLGv8vLVtOw6R/mnALGBQBg2Doev6C0Xibz77+CWx/LAo6hyi8zW+b9DoCcisPKQEMpy98ZyzAhu2PRdUP71Ms6jxs0usSsPygEsAwevV6XALCT46A/Q4dWsDWQZNel4CKN5QAhtErcQrYfhrsd+jwAt4y6XUE5FS8pgQwXL5yLS4Bla1HwH6HDi1gyyGTXpeAZQeUAIbeN78wHv/z9T/A9seCFbBwy0GTXpcA/8tKAENx44D8DfCnkYCe/k/B9seCFtAxYNLrFtAvAvrB0t13nh5/+covMOmOBS/gdZNeR0D20l4lwITuvnPU+KL6V2HarUMLeNTou1wCHtynBJiyctMQLl76fvLP/LWb6O49g3g6Y8ELeMWk1yWgfK8SMBVC247eomLNAKbapcMKyG/fb9LrCMgq36MEzFRoAW0vmfS6BDwQUQJmKryAPpNel4CyZ5WAROPf+SWFnqMFbO41uccRkFnWowQkmnUfgkLPsQLyNu8zuccl4P5nlIBEQwvQcrSATS+a3OMSsGSnEpBoaAFajhew1+Qel4DSHUpAoqEFaDlawMY9Jvc4AjJKn1ACEg0rQM/xAiIm97gElGxTAhINLUDLsQJ8jzxnco9LQHGXEpBoaAFajhew2+QeR8C9xZ1KQKJhBeg5WsCGHpN7XAKKOpSAREML0HK0gHC3yT0uAYvblQCGwrI2hJo2UOhZWoCWYwV4w0+D3WFvHhcw/77NSgBDqHE9MNhEoWdZAXqOFrD+KbA77M0uARtFwEYwhBqDBgImZnkBE3O8gB1gd9ibHQGFG5QAhmBDgBegZWkBWo4WENoOdoe92RFQEFICGIINrbwALUsL0HK8gMfB7rA3jwu4pyCgBDAE69fSAvQsK0DPsQIWBLeB3WFvdgQsalUCGIJ1a3gBWpYWoOV4AV1gd9ibHQEL1yoBDIG61bwALUsL0HK0gEAn2B325nEB6fmrlQCGQG0LLUDPsgL0HC9gK9gd9maXgBYR0AKGQO0qAwETs7yAiTlWQO66DrA77M2OgLyHlACGQM1KXoCWpQVoOV5AO9gd9mZHgK85KoAhUNPEC9CytAAtRwtobQO7w948LiDN1xhJ8zaAIb+wAeuqOSZlG3dT6LnchzdRzC9ZBXaHvdkR4K3zC5hjTHxak7agxhIwR7Am/a9wam5VRMAcIRJDQGW6YKXmLkdyY2+sjP2YKjWnIpyaswzJTcWdH1F5spcOC0hSuHdDnuzyYU9WOZIK2WT0csyTVSYSypAkDMf1dtCTuSTsySy1BMxSLHvDlF6PpmSWpKdklERSMootAbME69bNcvtdfUecklHkT8lYLDIWRwU1w4jevq3o7j6eTvbPP6fas4BxgeMDAAAAAElFTkSuQmCC">
+<title>RL Dashboard Install Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  /* Layout: one readable column, like the app's own dark panels; blue = do this, orange = heads-up (the game's two team colours). Single dark look on purpose, to match the dashboard. */
+  :root {
+    color-scheme: dark;
+    --bg: #0f1420;
+    --panel: #182032;
+    --panel-2: #1e2840;
+    --line: #2a3550;
+    --text: #e8ecf5;
+    --muted: #97a1b8;
+    --blue: #3b9eff;
+    --orange: #ff9a3b;
+    --green: #35d39a;
+    --display: "Barlow Semi Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+    --body: "Barlow", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", Consolas, "Courier New", monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: var(--body); font-size: 17px; line-height: 1.55;
+    padding-block: 32px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  main { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.1; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(38px, 7vw, 56px); font-weight: 800; letter-spacing: .01em; }
+  h1 .blue { color: var(--blue); } h1 .orange { color: var(--orange); }
+  h2 { font-size: 28px; font-weight: 700; display: flex; align-items: baseline; gap: 12px; }
+  h2 .tag { font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  h3 { font-size: 20px; font-weight: 700; }
+  p { margin: 0; }
+  a { color: var(--blue); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+  .lede { color: var(--muted); font-size: 19px; max-width: 60ch; }
+  section { display: flex; flex-direction: column; gap: 18px; }
+
+  /* Hero */
+  .hero { display: flex; flex-direction: column; gap: 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line); padding-block-end: 36px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .get { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer;
+    font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: .02em;
+    color: #08111f; background: var(--blue); border: 0; border-radius: 10px; padding: 14px 22px;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn svg { width: 20px; height: 20px; }
+  .ghost { font-family: var(--body); font-size: 15px; font-weight: 600; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 11px 16px; cursor: pointer; }
+  .ghost:hover { border-color: var(--muted); }
+  .linkline { font-family: var(--mono); font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+  .small { font-size: 14px; color: var(--muted); }
+
+  /* Steps: a real sequence, so they're numbered */
+  ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; counter-reset: step; }
+  ol.steps > li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  ol.steps > li::before {
+    content: counter(step); font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--blue);
+    width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--blue); display: grid; place-items: center;
+  }
+  .step { min-width: 0; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+  .step p { color: var(--muted); }
+  .step p strong, .step li strong { color: var(--text); font-weight: 600; }
+  .step ul { margin: 2px 0 0; padding-left: 20px; color: var(--muted); }
+
+  /* Heads-up callout (orange = attention, like the other team) */
+  .heads { border-left: 3px solid var(--orange); background: var(--panel); padding: 12px 16px; border-radius: 0 8px 8px 0; color: var(--text); font-size: 15.5px; }
+  .heads b { color: var(--orange); }
+
+  /* Path through menus: Settings › Video › Display Mode */
+  .path { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; font-weight: 600; color: var(--text); }
+  .path span { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; font-size: 15px; }
+  kbd { font-family: var(--mono); font-size: 13px; background: var(--panel-2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; color: var(--text); white-space: nowrap; }
+
+  /* Everyday controls */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .card p { color: var(--muted); font-size: 15.5px; }
+
+  /* Update flow */
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .flow span { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px; }
+  .flow i { color: var(--muted); font-style: normal; }
+
+  dl { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  dt { font-weight: 600; }
+  dd { margin: 2px 0 0; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding-top: 18px; font-size: 13.5px; color: var(--muted); }
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    ol.steps > li { grid-template-columns: 36px 1fr; gap: 12px; }
+    ol.steps > li::before { width: 36px; height: 36px; font-size: 18px; }
+  }
+  @media (prefers-reduced-motion: no-preference) { .btn { transition: filter .15s; } }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <span class="eyebrow">For Rocket League on Windows · Free</span>
+    <h1>Your <span class="blue">stats</span>, every <span class="orange">match</span>.</h1>
+    <p class="lede">RL Dashboard records every Rocket League match you play. You get an overlay on top of the game (session record, streaks, MVPs, who you're playing) and a stats dashboard. Everything stays on your PC.</p>
+    <div class="get">
+      <a class="btn" id="dl" href="https://github.com/ebierman26/rl-dashboard-kit/releases/latest/download/RL-Dashboard-Setup.exe" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6 10 6 6 6-6"/><path d="M4 20h16"/></svg>
+        Download the installer
+      </a>
+      <button type="button" class="ghost" id="copy">Copy link</button>
+    </div>
+    <p class="linkline" id="link">https://github.com/ebierman26/rl-dashboard-kit/releases/latest/download/RL-Dashboard-Setup.exe</p>
+    <p class="small">Windows 10 or 11. Takes about two minutes. The link always gives you the newest version.</p>
+  </header>
+
+  <section aria-labelledby="install">
+    <h2 id="install">Install <span class="tag">once</span></h2>
+    <ol class="steps">
+      <li><div class="step">
+        <h3>Run the installer</h3>
+        <p>Double-click <strong>RL-Dashboard-Setup.exe</strong> in your Downloads.</p>
+        <div class="heads"><b>Blue "Windows protected your PC" box?</b> That's normal for small free programs that aren't paid-signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</div>
+      </div></li>
+      <li><div class="step">
+        <h3>Click through three pages</h3>
+        <ul>
+          <li><strong>Welcome</strong>: click Next.</li>
+          <li><strong>Where to install</strong>: the default is fine (or Browse to pick a folder).</li>
+          <li><strong>Your Rocket League name</strong>: optional. Leave it empty and it's picked up in your first match. Then click Install.</li>
+        </ul>
+      </div></li>
+      <li><div class="step">
+        <h3>Click Yes when Windows asks</h3>
+        <p>Setup turns on Rocket League's built-in stats, which needs your permission once. If you don't have Python, it installs that too (a black window shows the progress).</p>
+      </div></li>
+      <li><div class="step">
+        <h3>"You're all set!"</h3>
+        <p>It starts on its own whenever you log in to Windows, and you get an <strong>RL Dashboard</strong> icon on your desktop. If it says <strong>Almost done</strong>, it tells you exactly what to click.</p>
+      </div></li>
+      <li><div class="step">
+        <h3>One setting in Rocket League</h3>
+        <p><span class="path"><span>Settings</span>›<span>Video</span>›<span>Display Mode</span>›<span>Borderless</span></span></p>
+        <p>The overlay can only show on top of the game in Borderless.</p>
+      </div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="play">
+    <h2 id="play">Playing <span class="tag">every day</span></h2>
+    <p>Just open Rocket League. Everything is already running.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Overlay</h3>
+        <p>Drag it where you like. Right-click it for size, compact mode, lock and more. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd> shows or hides it, even in game.</p>
+      </div>
+      <div class="card">
+        <h3>Dashboard</h3>
+        <p>Opens when the game starts, or click the RL Dashboard icon. Filter by mode and by today, this week or this month.</p>
+      </div>
+      <div class="card">
+        <h3>Tray icon</h3>
+        <p>The RL icon by the clock (under the <strong>^</strong> arrow on Windows 11). Click it for the dashboard; right-click for everything else.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="updates">
+    <h2 id="updates">Updates <span class="tag">automatic</span></h2>
+    <div class="flow" aria-label="How an update works">
+      <span>Notification pops up by the clock</span><i>→</i><span>Click it</span><i>→</i><span>Read what's new</span><i>→</i><span>Click Yes</span>
+    </div>
+    <p>It restarts on the new version in a few seconds. Your name, settings and match history are kept, and nothing installs without your Yes. To check right away: right-click the tray icon, then <strong>Check for updates</strong>.</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Good to know</h2>
+    <dl>
+      <div><dt>Will Rocket League think it's cheating?</dt>
+        <dd>No. It uses the game's official Stats API, which Psyonix provides for tools like this. It doesn't touch the game's files or memory, and the overlay is a separate window.</dd></div>
+      <div><dt>The overlay won't let me click it.</dt>
+        <dd>It's locked, so clicks go through to the game. Right-click the tray icon, then <strong>Unlock overlay</strong>.</dd></div>
+      <div><dt>A win or loss didn't count.</dt>
+        <dd>Right-click the overlay, then <strong>Fix record</strong> to add or remove one.</dd></div>
+      <div><dt>Change my name or turn off start-at-login?</dt>
+        <dd>Right-click the tray icon, then <strong>Settings</strong>.</dd></div>
+      <div><dt>How do I uninstall it?</dt>
+        <dd>Windows Settings › Apps › RL Dashboard › Uninstall. It asks whether to keep your match history.</dd></div>
+    </dl>
+  </section>
+
+  <footer>Unofficial fan tool: not affiliated with or endorsed by Psyonix or Epic Games. Rocket League is a trademark of Psyonix.</footer>
+</main>
+
+<script>
+  const btn = document.getElementById("copy");
+  const link = document.getElementById("link");
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(link.textContent.trim());
+      btn.textContent = "Copied";
+    } catch (e) {
+      const r = document.createRange(); r.selectNodeContents(link);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selected: press Ctrl+C";
+    }
+    setTimeout(() => { btn.textContent = "Copy link"; }, 2500);
+  });
+</script>
+</body>
+</html>
