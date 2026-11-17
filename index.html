@@ -168,6 +168,9 @@
     </div>
     <p class="linkline" id="link">https://github.com/ebierman26/rl-dashboard-kit/releases/latest/download/RL-Dashboard-Setup.exe</p>
     <p class="small">Windows 10 or 11. Takes about two minutes. The link always gives you the newest version.</p>
+    <!-- The installer is the same file every release (HOW-IT-WORKS 9.3), so this report stays
+         valid until it's rebuilt: then scan the new file and update this link. -->
+    <p class="small">Checked by 69 antivirus programs, including Microsoft Defender: none flagged it. <a href="https://www.virustotal.com/gui/file/1c0fc495f7a66c766ff2a2df5bc22dbcc54e5ff429492f90ef0f4bd425469472/detection" target="_blank" rel="noopener noreferrer">See the VirusTotal report</a>.</p>
     <!-- filled in by the script at the bottom (Setup.exe downloads from GitHub); stays hidden if that fails -->
     <p class="small" id="downloads" hidden></p>
   </header>
@@ -355,7 +358,7 @@
       <div><dt>I already have an older version.</dt>
         <dd>Just run the installer. It finds your copy and updates it in the same folder, keeping your name, settings and match history.</dd></div>
       <div id="defender"><dt>Windows Security flagged the installer (e.g. "Trojan:Win32/Wacatac").</dt>
-        <dd>That's a false alarm. Windows sometimes guesses that a new program from a small developer is a threat, especially an installer few people have downloaded yet. The file has been reported to Microsoft as safe. To install anyway:
+        <dd>That's a false alarm. Windows sometimes guesses that a new program from a small developer is a threat, especially an installer few people have downloaded yet. The file has been reported to Microsoft as safe, and you can check it yourself: <a href="https://www.virustotal.com/gui/file/1c0fc495f7a66c766ff2a2df5bc22dbcc54e5ff429492f90ef0f4bd425469472/detection" target="_blank" rel="noopener noreferrer">69 antivirus programs scanned this exact file</a> (VirusTotal), and none of them flagged it. To install anyway:
           <ol>
             <li>Open <strong>Windows Security</strong> › <strong>Virus &amp; threat protection</strong> › <strong>Protection history</strong>.</li>
             <li>Click the RL-Dashboard-Setup.exe entry, then <strong>Actions</strong> › <strong>Allow on device</strong> (or <strong>Restore</strong>).</li>
