@@ -209,7 +209,7 @@
       <button type="button" class="ghost" id="copy">Copy link</button>
     </div>
     <p class="linkline" id="link">https://github.com/ebierman26/rl-dashboard-kit/releases/latest/download/RL-Dashboard-Setup.exe</p>
-    <p class="small">Windows 10 or 11. Takes about two minutes. The link always gives you the newest version.</p>
+    <p class="small">Windows 10 or 11. Takes about two minutes. About 15 MB to download, about 35 MB once installed. The link always gives you the newest version.</p>
     <!-- The installer is the same file every release (HOW-IT-WORKS 9.3), so this report stays
          valid until it's rebuilt: then scan the new file and update this link. -->
     <p class="small">Checked by 69 antivirus programs, including Microsoft Defender: none flagged it. <a href="https://www.virustotal.com/gui/file/29644a4368a7d993323795278a4c7e1ea54446fdafcbf6d5deeeb1b5ce09e3ad/detection" target="_blank" rel="noopener noreferrer">See the VirusTotal report</a>.</p>
@@ -411,6 +411,8 @@
         <div class="answer">Double-click <strong>RL Dashboard</strong> on your desktop, or click <strong>^</strong> by the clock to find the tray icon. Right-click it › <strong>Quick tour</strong> to see where everything is.</div></details>
       <details class="qa"><summary>I already have it, or the installer says it's already installed.</summary>
         <div class="answer">You're all good: run the installer anyway. It updates the copy you have, in the same folder, and keeps your name, settings and match history.</div></details>
+      <details class="qa"><summary>How much space does it take?</summary>
+        <div class="answer">About <strong>35 MB</strong> once installed. That includes its own copy of Python, so there's nothing else to install. On top of that, it grows a little as you play: your match history takes about 3 KB a game (1,000 games is about 3 MB), it keeps the last 14 daily backups of that history (about 45 MB at 1,000 games), and its log files trim themselves once they reach 5 MB. The zip version is under 1 MB, because it uses the Python on your PC (and installs Python first if your PC doesn't have it).</div></details>
     </div>
     <h3>Playing</h3>
     <div class="qa-list">
